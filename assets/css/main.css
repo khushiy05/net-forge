@@ -1724,3 +1724,101 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Contact: new form + extras */
+.contact .contact-cta {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact .contact-form input[type=text],
+.contact .contact-form input[type=email],
+.contact .contact-form input[type=tel],
+.contact .contact-form input[type=number],
+.contact .contact-form select,
+.contact .contact-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form select:focus,
+.contact .contact-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .contact-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .contact-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.contact .contact-form button[type=submit]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact .privacy-note {
+  font-size: 13px;
+  margin: 12px 0 0;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.contact .form-result {
+  display: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact .form-result.success { display: block; background: #059652; }
+.contact .form-result.error   { display: block; background: #df1529; }
+
+.contact .info-item a:not(.btn-whatsapp) {
+  color: var(--default-color);
+}
+
+.contact .info-item a:not(.btn-whatsapp):hover {
+  color: var(--accent-color);
+}
+
+.contact .btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #25d366;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .btn-whatsapp:hover {
+  background: #1ebe5b;
+  color: #fff;
+}
+
+.contact .btn-whatsapp i {
+  width: auto;
+  height: auto;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}

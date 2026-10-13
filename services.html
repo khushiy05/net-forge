@@ -1,23 +1,533 @@
-<section id="network-assessment" class="service-block py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <i class="bi bi-search service-icon"></i>
-        <h2>Network Assessment</h2>
-        <p>A full health check of your network.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services | NetForge Network Consulting in Nagpur</title>
+  <meta name="description" content="NetForge services: network assessment, architecture, firewall assessment, SD-WAN, Cisco ACI, migration, documentation, troubleshooting, monitoring, managed support and automation.">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/css/nav.css" rel="stylesheet">
+
+  <style>
+    /* Header (solid version of the index.html header) */
+    #header.header {
+      background: #0a2d3a !important;
+      box-shadow: none !important;
+      height: 82px;
+      padding: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    #header .logo .sitename {
+      font-family: "Raleway", sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    #header .logo .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.35);
+      color: #fff;
+      width: 32px;
+      height: 48px;
+      margin: 0 10px;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+    @media (min-width: 1200px) {
+      .navmenu a,
+      .navmenu a:focus {
+        font-family: "Raleway", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 18px 20px;
+      }
+      .navmenu a:hover,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: #fff;
+      }
+    }
+    #header .btn-getstarted,
+    #header .btn-getstarted:focus {
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 0;
+      padding: 10px 22px;
+    }
+    #header .btn-getstarted:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    /* Page banner */
+    .services-banner {
+      background: #0a2d3a;
+      color: #fff;
+      text-align: center;
+      padding: 140px 0 60px;
+    }
+    .services-banner h1 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin: 0 0 14px;
+      color: #fff;
+    }
+    .services-banner p {
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Service blocks */
+    .service-block {
+      scroll-margin-top: 90px;
+      padding: 70px 0;
+    }
+    .service-block:nth-of-type(even) {
+      background: #f6f9fb;
+    }
+    .service-block .service-icon {
+      font-size: 34px;
+      color: var(--accent-color, #2563eb);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .service-block h2 {
+      font-family: "Plus Jakarta Sans", "Raleway", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--heading-color, #0f172a);
+      margin-bottom: 12px;
+    }
+    .service-block p {
+      font-size: 17px;
+      color: var(--default-color, #475569);
+    }
+    .service-block ul {
+      padding-left: 20px;
+      margin: 16px 0 24px;
+    }
+    .service-block ul li {
+      margin-bottom: 8px;
+    }
+    .service-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+    .btn-consult {
+      display: inline-block;
+      background: var(--accent-color, #2563eb);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-consult:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <h1 class="sitename">NET<span class="logo-mark">!</span>FORGE</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
         <ul>
-          <li>Network discovery</li>
-          <li>Firewall, switch, VLAN/IP, ISP and VPN review</li>
-          <li>Configuration backup check</li>
-          <li>Topology diagram</li>
-          <li>Risk report and recommendations</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="services.html" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="services.html#network-assessment">Network Assessment</a></li>
+              <li><a href="services.html#network-architecture">Network Architecture</a></li>
+              <li><a href="services.html#firewall-assessment">Firewall Assessment</a></li>
+              <li><a href="services.html#sd-wan">SD-WAN</a></li>
+              <li><a href="services.html#cisco-aci">Cisco ACI</a></li>
+              <li><a href="services.html#migration">Existing Network Migration</a></li>
+              <li><a href="services.html#documentation">Network Documentation</a></li>
+              <li><a href="services.html#troubleshooting">Troubleshooting</a></li>
+              <li><a href="services.html#monitoring">Monitoring</a></li>
+              <li><a href="services.html#manage-network">Manage Network (Monthly Support)</a></li>
+              <li><a href="services.html#automation">Automation</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <a href="contact.html" class="btn-consult">Request a Consultation</a>
-      </div>
-      <div class="col-lg-6">
-        <img src="assets/img/services/network-assessment.webp"
-             alt="Network assessment topology review" loading="lazy">
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#contact">Request a Consultation <i class="bi bi-arrow-right"></i></a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="services-banner">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p>Network architecture, security, SD-WAN and infrastructure consulting</p>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- 1. Network Assessment -->
+    <section id="network-assessment" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-clipboard-check service-icon"></i>
+            <h2>Network Assessment</h2>
+            <p>A full health check of your network.</p>
+            <ul>
+              <li>Network discovery</li>
+              <li>Firewall, switch, VLAN/IP, ISP and VPN review</li>
+              <li>Configuration backup check</li>
+              <li>Topology diagram</li>
+              <li>Risk report and recommendations</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/network-assessment.webp" alt="Network assessment topology review" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Network Architecture -->
+    <section id="network-architecture" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <i class="bi bi-diagram-3 service-icon"></i>
+            <h2>Network Architecture</h2>
+            <p>Secure, scalable LAN, WAN and campus network design.</p>
+            <ul>
+              <li>Requirements and traffic analysis</li>
+              <li>LAN, WAN and campus design</li>
+              <li>Redundancy and segmentation planning</li>
+              <li>Design document and equipment list</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/network-architecture.webp" alt="Network architecture design" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Firewall Assessment -->
+    <section id="firewall-assessment" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-shield-lock service-icon"></i>
+            <h2>Firewall Assessment</h2>
+            <p>Firewall configuration and security policy assessment.</p>
+            <ul>
+              <li>Rule and policy review</li>
+              <li>Configuration and hardening check</li>
+              <li>Unused and risky rule cleanup</li>
+              <li>Findings report with fixes</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/firewall-assessment.webp" alt="Firewall assessment" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SD-WAN -->
+    <section id="sd-wan" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <i class="bi bi-router service-icon"></i>
+            <h2>SD-WAN</h2>
+            <p>Multi-ISP branch connectivity with centralized policy and automatic failover.</p>
+            <ul>
+              <li>Multi-ISP branch connectivity</li>
+              <li>Centralized policy and visibility</li>
+              <li>Automatic failover between links</li>
+              <li>Phased branch rollout</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/sd-wan.webp" alt="SD-WAN branch connectivity" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Cisco ACI -->
+    <section id="cisco-aci" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-hdd-rack service-icon"></i>
+            <h2>Cisco ACI</h2>
+            <p>Data center networking, spine-leaf and VXLAN design.</p>
+            <ul>
+              <li>Spine-leaf fabric design</li>
+              <li>VXLAN / EVPN overlay</li>
+              <li>Tenants, policies and segmentation</li>
+              <li>Migration into the ACI fabric</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/cisco-aci.webp" alt="Cisco ACI spine-leaf fabric" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Existing Network Migration -->
+    <section id="migration" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <i class="bi bi-arrow-left-right service-icon"></i>
+            <h2>Existing Network Migration</h2>
+            <p>Move your current network to a new design with minimal downtime.</p>
+            <ul>
+              <li>Current-state review</li>
+              <li>Migration plan with rollback steps</li>
+              <li>Cutover with minimal downtime</li>
+              <li>Post-migration validation</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/migration.webp" alt="Network migration planning" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Network Documentation -->
+    <section id="documentation" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-file-earmark-text service-icon"></i>
+            <h2>Network Documentation</h2>
+            <p>Clear, up-to-date diagrams and documents of your network.</p>
+            <ul>
+              <li>Physical and logical diagrams</li>
+              <li>IP, VLAN and device inventory</li>
+              <li>Configuration records</li>
+              <li>Runbooks for your team</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/documentation.webp" alt="Network documentation and diagrams" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Troubleshooting -->
+    <section id="troubleshooting" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <i class="bi bi-tools service-icon"></i>
+            <h2>Troubleshooting</h2>
+            <p>Fast root-cause analysis and fixes for network and connectivity issues.</p>
+            <ul>
+              <li>Root-cause analysis</li>
+              <li>Connectivity and performance issues</li>
+              <li>Fix and prevention advice</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/troubleshooting.webp" alt="Network troubleshooting" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Monitoring -->
+    <section id="monitoring" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-activity service-icon"></i>
+            <h2>Monitoring</h2>
+            <p>Keep track of network health, performance and alerts.</p>
+            <ul>
+              <li>Device and link health monitoring</li>
+              <li>Performance dashboards</li>
+              <li>Alerts for outages and thresholds</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/monitoring.webp" alt="Network monitoring dashboard" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Manage Network -->
+    <section id="manage-network" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-lg-6">
+            <i class="bi bi-headset service-icon"></i>
+            <h2>Manage Network (Monthly Support)</h2>
+            <p>Monthly support to keep your network stable and secure.</p>
+            <ul>
+              <li>Regular health checks</li>
+              <li>Change and configuration management</li>
+              <li>Issue response and escalation</li>
+              <li>Monthly status report</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/manage-network.webp" alt="Managed network support" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Automation -->
+    <section id="automation" class="service-block">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <i class="bi bi-gear service-icon"></i>
+            <h2>Automation</h2>
+            <p>Python and Ansible automation to reduce repetitive work.</p>
+            <ul>
+              <li>Automated configuration backups</li>
+              <li>Bulk changes across devices</li>
+              <li>Compliance and config checks</li>
+            </ul>
+            <a href="index.html#contact" class="btn-consult">Request a Consultation</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/services/automation.webp" alt="Network automation with Python and Ansible" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">NetForge</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Nagpur</p>
+              <p>Maharashtra, India</p>
+              <p class="mt-3"><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#network-architecture">Network Architecture</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#firewall-assessment">Firewall Assessment</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#sd-wan">SD-WAN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#cisco-aci">Cisco ACI</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#automation">Automation</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">NetForge</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">Designed by NetForge</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
