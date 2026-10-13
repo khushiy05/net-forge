@@ -1716,3 +1716,11 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Responsive images (from client brief)
+--------------------------------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
