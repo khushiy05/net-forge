@@ -116,9 +116,8 @@
       scroll-margin-top: 90px;
       padding: 70px 0;
     }
-    .service-block:nth-of-type(even) {
-      background: #f6f9fb;
-    }
+    .service-block { display: none; min-height: 60vh; }
+    .service-block.active { display: block; }
     .service-block .service-icon {
       font-size: 34px;
       color: var(--accent-color, #2563eb);
@@ -180,7 +179,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="services.html" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#" class="active services-toggle"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="services.html#network-assessment">Network Assessment</a></li>
               <li><a href="services.html#network-architecture">Network Architecture</a></li>
@@ -527,6 +526,24 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    /* Show one service at a time, based on the #hash in the URL */
+    function showService() {
+      var blocks = document.querySelectorAll('.service-block');
+      var target = document.getElementById(location.hash.slice(1));
+      if (!target || !target.classList.contains('service-block')) target = blocks[0];
+      blocks.forEach(function (b) { b.classList.toggle('active', b === target); });
+      window.scrollTo(0, 0);
+    }
+    window.addEventListener('hashchange', showService);
+    window.addEventListener('load', showService);
+    showService();
+
+    /* Services menu item: open the dropdown only, don't navigate */
+    document.querySelectorAll('.services-toggle').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  </script>
 
 </body>
 
