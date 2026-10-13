@@ -169,28 +169,19 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
-          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#" class="services-toggle"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="service-details.html">Network Assessment</a></li>
-              <li><a href="service-details.html">Network Architecture</a></li>
-              <li><a href="service-details.html">Firewall Assessment</a></li>
-              <li><a href="service-details.html">SD-WAN</a></li>
-              <li><a href="service-details.html">Cisco ACI</a></li>
-              <li><a href="service-details.html">Existing Network Migration</a></li>
-              <li><a href="service-details.html">Network Documentation</a></li>
-              <li><a href="service-details.html">Troubleshooting</a></li>
-              <li><a href="service-details.html">Monitoring</a></li>
-              <li><a href="service-details.html">Manage Network (Monthly Support)</a></li>
-              <li><a href="service-details.html">Automation</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Industries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Banking &amp; Finance</a></li>
-              <li><a href="#">Healthcare</a></li>
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Manufacturing</a></li>
-              <li><a href="#">IT &amp; Telecom</a></li>
+              <li><a href="services.html#network-assessment">Network Assessment</a></li>
+              <li><a href="services.html#network-architecture">Network Architecture</a></li>
+              <li><a href="services.html#firewall-assessment">Firewall Assessment</a></li>
+              <li><a href="services.html#sd-wan">SD-WAN</a></li>
+              <li><a href="services.html#cisco-aci">Cisco ACI</a></li>
+              <li><a href="services.html#migration">Existing Network Migration</a></li>
+              <li><a href="services.html#documentation">Network Documentation</a></li>
+              <li><a href="services.html#troubleshooting">Troubleshooting</a></li>
+              <li><a href="services.html#monitoring">Monitoring</a></li>
+              <li><a href="services.html#manage-network">Manage Network (Monthly Support)</a></li>
+              <li><a href="services.html#automation">Automation</a></li>
             </ul>
           </li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -346,7 +337,7 @@
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
             </ul>
           </div>
@@ -354,23 +345,14 @@
           <div class="col-lg-4 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Network Architecture</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Firewall & Security</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">SD-WAN</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Data Center</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Automation</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#network-architecture">Network Architecture</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#firewall-assessment">Firewall Assessment</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#sd-wan">SD-WAN</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#cisco-aci">Cisco ACI</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="services.html#automation">Automation</a></li>
             </ul>
           </div>
 
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <div class="container text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">NetForge</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          Designed by NetForge
         </div>
       </div>
     </div>
@@ -390,6 +372,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    /* Services menu item: open the dropdown only, don't navigate */
+    document.querySelectorAll('.services-toggle').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  </script>
 
 </body>
 
