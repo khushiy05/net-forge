@@ -1,0 +1,183 @@
+/* ===== Transparent nav bar with dropdowns + yellow CTA =====
+   Save as: assets/css/nav.css
+   Selectors are prefixed with "body #header" so they override main.css
+   and the inline Reign-style <style> block. */
+
+/* Header bar: transparent over the hero */
+body #header.header {
+  background: transparent !important;
+  height: 84px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: none !important;
+  transition: background 0.3s ease;
+}
+body #header.header .container-xl {
+  max-width: 1320px;
+}
+
+/* After scrolling: dark teal bar so links stay readable on light sections */
+body.scrolled #header.header {
+  background: rgba(10, 45, 58, 0.95) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom-color: transparent;
+}
+
+/* Logo */
+body #header .logo .sitename {
+  font-family: "Plus Jakarta Sans", "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff;
+}
+body #header .logo .logo-mark {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 28px;
+  height: 42px;
+  margin: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* Nav links (all sizes) */
+body #header .navmenu a,
+body #header .navmenu a:focus {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+body #header .navmenu a:hover,
+body #header .navmenu li:hover > a {
+  color: #fbbf24;
+}
+body #header .navmenu a.active,
+body #header .navmenu a.active:focus {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* CTA button */
+body #header .btn-getstarted,
+body #header .btn-getstarted:focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #111827;
+  background: linear-gradient(135deg, #fbbf24, #e9a93b);
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 24px;
+  box-shadow: 0 10px 24px rgba(245, 166, 35, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+body #header .btn-getstarted:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #fbbf24, #e9a93b);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(245, 166, 35, 0.45);
+}
+body #header .btn-getstarted i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  body #header .navmenu > ul {
+    gap: 2px;
+  }
+  body #header .navmenu > ul > li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 18px 14px;
+  }
+  /* Orange underline on the active item */
+  body #header .navmenu > ul > li > a.active::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 10px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #f59e0b, #ea580c);
+  }
+
+  /* Chevron */
+  body #header .navmenu .toggle-dropdown {
+    font-size: 11px;
+    margin-left: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    background: none;
+    transition: transform 0.2s ease;
+  }
+  body #header .navmenu .dropdown:hover > a .toggle-dropdown {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown panel: dark glass, no white */
+  body #header .navmenu .dropdown ul {
+    left: 0;
+    min-width: 270px;
+    padding: 10px;
+    background: rgba(10, 45, 58, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  body #header .navmenu .dropdown ul li {
+    min-width: 0;
+  }
+  body #header .navmenu .dropdown ul a {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  body #header .navmenu .dropdown ul a:hover,
+  body #header .navmenu .dropdown ul li:hover > a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fbbf24;
+  }
+}
+
+/* Mobile / tablet */
+@media (max-width: 1199.98px) {
+  body #header .mobile-nav-toggle {
+    color: #fff;
+  }
+  body #header .btn-getstarted {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  body #header .navmenu > ul {
+    background: rgba(10, 45, 58, 0.98);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+  body #header .navmenu > ul a {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  body #header .navmenu > ul a.active {
+    color: #fbbf24;
+  }
+  body #header .navmenu .dropdown ul {
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
